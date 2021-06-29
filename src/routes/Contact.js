@@ -15,7 +15,7 @@ export default function Contact() {
         const contact = {
             email: data.email,
             message: data.message,
-            datetime: new Date()
+            datetime: (new Date()).toString()
         }
         contactRef.push(contact)
 
