@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .nav-open {
+        @apply transition-all flex flex-col opacity-100 max-h-52 md:block md:flex-row md:mx-6 md:visible;
+    }
+    .nav-close {
+        @apply transition-all flex flex-col invisible opacity-0 md:opacity-100 md:visible max-h-0 md:max-h-52 md:block md:flex-row md:mx-6;
+    }
+  
+  }
