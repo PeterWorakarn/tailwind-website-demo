@@ -1,5 +1,7 @@
 # DEMO WEBSITE USING TAILWIND CSS
-
+ทดลองการใช้งาน React ร่วมกับ Cloud Backend service ได้แก่
+- firebase Real-Time Database
+- Wordpress REST-API
 
 #### 💻 Languages and Tools:
 <img alt="REACT" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/> <img alt="TAILWIND" src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/> <img alt="NETLIFY" src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" /> 
