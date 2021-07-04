@@ -6,6 +6,8 @@ import Blog from './routes/Blog';
 import Contact from './routes/Contact';
 import useReducer1 from './routes/useReducer1';
 import useReducer2 from './routes/useReducer2';
+import PhoneBook from './routes/PhoneBook';
+import reduxCRUD from './routes/reduxCRUD';
 import Pixabay from './routes/Pixabay';
 import InfinityScroll from './routes/InfinityScroll';
 import Notfound from './routes/Notfound';
@@ -30,6 +32,8 @@ function App() {
             <Route path="/usereducer2" component={useReducer2} />
             <Route path="/infinityscroll" component={InfinityScroll} />
             <Route path="/pixabay" component={Pixabay} />
+            <Route path="/phonebook" component={PhoneBook} />
+            <Route path="/reduxcrud" component={reduxCRUD} />
             <Route path="*" component={Notfound} />
           </Switch>
         </main>
