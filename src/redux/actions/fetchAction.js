@@ -6,9 +6,10 @@ export const fetch_post = () => {
         type:ACTIONS.FETCH_USER
     }
 }
-export const fetched_post = () => {
+export const fetched_post = (payload) => {
     return {
-        type:ACTIONS.FETCHED_USER
+        type:ACTIONS.FETCHED_USER,
+        data:payload.post
     }
 }
 export const received_error = () => {
@@ -17,3 +18,16 @@ export const received_error = () => {
     }
 }
 
+export const thunk_action_creator = username => {
+    const user = username.replace(/\s/g,"")
+    store.dispatch(fetch_post())
+    return function(dispatch, getState) {
+        return fetch(`https://api.github.com/users/${user}`)
+                .then(data => data.json())
+                .then(data => {
+                    if (data.message === "Not Found") {
+                        throw new Error("No such user")
+                    } else dispatch
+                })
+    }
+}
