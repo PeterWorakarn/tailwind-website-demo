@@ -6,7 +6,7 @@ export const fetch_post = () => {
         type:ACTIONS.FETCH_USER
     }
 }
-export const fetched_post = (payload) => {
+export const reiceived_post = (payload) => {
     return {
         type:ACTIONS.FETCHED_USER,
         data:payload.post
@@ -27,7 +27,8 @@ export const thunk_action_creator = username => {
                 .then(data => {
                     if (data.message === "Not Found") {
                         throw new Error("No such user")
-                    } else dispatch
+                    } else dispatch(reiceived_post({payload:{post:data}}))
                 })
+                .catch(err => dispatch(received_error()))
     }
 }

@@ -1,9 +1,15 @@
 import React, {useRef} from 'react'
+import {useDispatch} from 'react-redux'
+import {thunk_action_creator} from '../redux/actions/fetchAction'
 
 export default function GithubSearch() {
     const userSearch = useRef()
+    const dispatch = useDispatch();
+    
     const handleSubmit = (e) => {
         e.preventDefault()
+        const username = userSearch.current.value
+        dispatch(thunk_action_creator(username)) 
         userSearch.current.value = ""
     }
 
