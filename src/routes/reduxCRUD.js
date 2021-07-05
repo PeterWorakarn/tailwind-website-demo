@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import PostForm from '../components/reduxCRUD/PostForm'
 import PostContent from '../components/reduxCRUD/PostContent'
+import Counter from '../components/Counter'
+import CounterHook from '../components/CounterHook'
+import GithubSearch from '../components/GithubSearch'
+import GithubUser from '../components/GithubUser'
 
-import {createStore} from 'redux'
 import {Provider} from 'react-redux'
-import postReducer from '../reducers/postReducer'
-const store = createStore(postReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+import store from '../redux/store'
+
 
 
 export default class reduxCRUD extends Component {
@@ -18,6 +21,13 @@ export default class reduxCRUD extends Component {
                 <PostForm />
                 <h3 className="text-2xl leading-6 mt-12 py-2 font-medium text-gray-900">All Post</h3>
                 <PostContent />
+                <h3 className="text-2xl leading-6 mt-12 py-2 font-medium text-gray-900">Counter App</h3>
+                <Counter />
+                <h3 className="text-2xl leading-6 mt-12 py-2 font-medium text-gray-900">CounterHook App</h3>
+                <CounterHook />
+                <h3 className="text-2xl leading-6 mt-12 py-2 font-medium text-gray-900">Github User Search</h3>
+                <GithubSearch />
+                <GithubUser />
                 </div>
             </div>
             </Provider>
