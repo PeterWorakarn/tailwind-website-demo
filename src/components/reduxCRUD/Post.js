@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ACTIONS from '../../reducers/ACTIONS'
+import ACTIONS from '../../redux/reducers/ACTIONS'
 import { connect } from 'react-redux'
 
 class Post extends Component {
