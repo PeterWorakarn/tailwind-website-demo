@@ -19,16 +19,19 @@ export const received_error = () => {
 }
 
 export const thunk_action_creator = username => {
+    alert("1")
     const user = username.replace(/\s/g,"")
     store.dispatch(fetch_post())
+    alert("2")
     return function(dispatch, getState) {
+        alert("3")
         return fetch(`https://api.github.com/users/${user}`)
-                .then(data => data.json())
-                .then(data => {
-                    if (data.message === "Not Found") {
-                        throw new Error("No such user")
-                    } else dispatch(reiceived_post({payload:{post:data}}))
-                })
-                .catch(err => dispatch(received_error()))
+        .then(data => data.json())
+        .then(data => {
+            if (data.message === "Not Found") {
+                throw new Error("No such user")
+            } else dispatch(reiceived_post({payload:{post:data}}))
+        })
+        .catch(err => dispatch(received_error()))
     }
 }
