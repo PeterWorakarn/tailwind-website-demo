@@ -9,6 +9,8 @@ import useReducer2 from './routes/useReducer2';
 import PhoneBook from './routes/PhoneBook';
 import reduxCRUD from './routes/reduxCRUD';
 import Pixabay from './routes/Pixabay';
+import SearchSuggestion from './routes/SearchSuggestion';
+import DynamicForm from './routes/DynamicForm';
 import InfinityScroll from './routes/InfinityScroll';
 import Notfound from './routes/Notfound';
 
@@ -33,6 +35,8 @@ function App() {
             <Route path="/infinityscroll" component={InfinityScroll} />
             <Route path="/pixabay" component={Pixabay} />
             <Route path="/phonebook" component={PhoneBook} />
+            <Route path="/searchsuggestion" component={SearchSuggestion} />
+            <Route path="/dynamicform" component={DynamicForm} />
             <Route path="/reduxcrud" component={reduxCRUD} />
             <Route path="*" component={Notfound} />
           </Switch>
